@@ -1,0 +1,139 @@
+.position{
+    position: relative;
+    top: 50px;
+}
+.boxPosition{
+    box-sizing: border-box;
+    background: linear-gradient(rgb(255, 255, 255) -6.71%, rgb(235, 235, 242) 56.19%, rgb(223, 223, 231) 106.56%);
+    padding: 0px 16px 16px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+    width: 800px;
+    height: 220px;
+   margin: 0 auto;
+}
+.boxParam{
+    border-radius: 20px;
+    border: 1px solid rgba(2, 6, 12, 0.15);
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 16px 0px;
+}
+.container{
+    padding: 10px 10px;
+}
+.boxContent{
+    display: flex;
+    gap: 20px;
+    
+}
+.rate{
+    display: flex;
+    margin-left: 10px;
+}
+.ratingLogo{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 20px;
+    gap: 20px;
+    margin: 0 3px;
+}
+
+.cuisines{
+    letter-spacing: -.1px;
+    color: #ff5200;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    margin-left: 15px;
+}
+.area{
+    max-width: 70%;
+    margin: 8px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  
+}
+.menuCard{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.namePos{
+    letter-spacing: -0.4px;
+    color: #434141;
+    margin: 0 auto 0 320px;
+    font-size: 15px;
+    display: flex;
+    position: relative;
+    top: 8px;
+    font-family: sans-serif;
+}
+.menuImage{
+    width: 120px;
+    height: 120px;
+    margin-left: 60px;
+}
+.displayList{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(180, 180, 180);
+
+}
+.detials{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+    
+}
+li{
+    list-style-type : none;
+}
+.recommended{
+    display: flex;
+    margin-left: 320px;
+}
+.itemName{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.75);
+}
+.itemPrice{
+    letter-spacing: -.3px;
+    color: #02060ceb;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.itemDes{
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.6);
+}

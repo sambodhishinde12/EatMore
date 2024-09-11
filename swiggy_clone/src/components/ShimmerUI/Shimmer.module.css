@@ -1,0 +1,21 @@
+.shimmercontainer{
+    margin: 32px 16px;
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+    list-style: none;
+    gap: 5px;
+    margin: 32px 16px;
+    
+   
+}
+.shimmercard{
+    padding: 5px;
+    background-color: rgb(217, 217, 217);
+    border-radius: 20px;
+    width: 250px;
+    height: 325px;
+    margin: 10px;
+}
