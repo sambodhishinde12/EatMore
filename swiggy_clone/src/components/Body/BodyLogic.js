@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import RestroCard, { deal } from "../Card/RestroCard";
 
 const BodyLogic = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
-
+  const restaurantDeal = deal(RestroCard);
   useEffect(() => {
     fetchData();
   }, []);
@@ -16,7 +17,6 @@ const BodyLogic = () => {
     const json = await data.json();
     const restaurants =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-
     setListOfRestaurants(restaurants);
     setFilteredRestaurants(restaurants);
   };

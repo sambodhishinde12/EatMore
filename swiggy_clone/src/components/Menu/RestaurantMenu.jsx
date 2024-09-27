@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Shimmer from "../ShimmerUI/Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API, MENU_IMG } from "../../utils/constants";
+
 import styles from "./RestaurantMenu.module.css"
 import rating from "../../utils/images/rating.png"
 import useRestautantMenu from "../../utils/useRestaurantMenu";
+import RestaurantItems from "./RestaurantItems";
 const RestaurantMenu = () => {
 
 const {resId} = useParams();
@@ -16,7 +17,9 @@ if(menu === null) return <Shimmer/>
 const {name, totalRatingsString , cuisines , areaName, costForTwoMessage,sla} = menu?.cards[2]?.card?.card?.info;
 
 const {itemCards,title} = menu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
- console.log(itemCards);
+const categories = menu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+    (res)=>res.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" 
+    || res.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"); 
 
 
     return(
@@ -50,26 +53,11 @@ const {itemCards,title} = menu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.ca
             <div className={styles.menuCard}>
                 <h1>Menu</h1>
             </div>
-                <h2 className={styles.recommended}>{title}</h2>
-                <div className={styles.menuContainer}>
-                <ul>
-                    {itemCards.map((item)=>(
-                        <li key={item?.card?.info?.id}> 
-                        <div className={styles.displayList}>
-                            <div className={styles.detials}>
-                               <div className={styles.itemName}> {item?.card?.info?.name}  </div>
-                               <div className={styles.itemPrice}> Rs.{(item?.card?.info?.finalPrice || item?.card?.info?.price || item?.card?.info?.defaultPrice)/100}  </div>
-                               <div className={styles.itemDes}> {item?.card?.info?.description} </div>
-                            </div>
-                            <div>
-                                <img src={MENU_IMG + item?.card.info?.imageId} alt="menuImage" className={styles.menuImage}></img>
-                            </div>
-                        </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+               
+            <div className={styles.menuContainer}>
+            {categories.map((category)=><RestaurantItems key={category?.card?.info?.id} data={category?.card?.card}/>)}
             
+            </div>
         </div>
        
         

@@ -1,6 +1,6 @@
 import React from "react";
 import BodyLogic from "./BodyLogic";
-import RestroCard from "../Card/RestroCard";
+import RestroCard, { deal } from "../Card/RestroCard";
 import Shimmer from "../ShimmerUI/Shimmer";
 import styles from "./Body.module.css";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ const Body = () => {
     setSearchText,
     filterTopRatedRestaurants,
   } = BodyLogic();
-
+  const RestaurantDeal = deal(RestroCard);
   const onlineStatus = useOnlineStatus();
   if(onlineStatus === false){
     return(
@@ -56,7 +56,9 @@ const Body = () => {
       ) : (
         <div className={styles.cardcontainer}>
           {filteredRestaurants.map((res) => (
-            <Link key={res.info.id} to={"/restaurant/"+res.info.id}><RestroCard  resData={res} /></Link>
+            <Link key={res.info.id} to={"/restaurant/"+res.info.id}>
+              
+              <RestaurantDeal  resData={res} /></Link>
           ))}
         </div>
       )}

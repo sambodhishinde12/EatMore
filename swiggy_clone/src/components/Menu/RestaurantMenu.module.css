@@ -77,7 +77,7 @@
 .menuImage{
     width: 120px;
     height: 120px;
-    margin-left: 60px;
+    border-radius: 15px;
 }
 .displayList{
     display: flex;
@@ -87,7 +87,7 @@
     padding: 20px 0;
     width: 100%;
     border-bottom: 1px solid rgb(180, 180, 180);
-
+    gap: 30px;
 }
 .detials{
     font-size: 14px;
@@ -99,9 +99,7 @@
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 60%;
-
-    
+  
 }
 li{
     list-style-type : none;
@@ -136,4 +134,54 @@ li{
     line-height: 19px;
     letter-spacing: -0.3px;
     color: rgba(2, 6, 12, 0.6);
+}
+.titleContainer{
+    border: none; 
+    align-items: center;
+    width: 770px;
+    margin: 5px;
+    padding: 8px;
+    box-shadow: 0 8px 8px #f1f1f3;
+    font-family: sans-serif;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.titleContainer.active {
+    border-bottom: 3px solid orange;
+  }
+.arrow{
+    width: 24px;
+    height: 27px;
+    position: relative;
+    display: flex;
+    top: 2px;
+}
+.positionMenu{
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    margin-top: 10px;
+    padding: 5px;
+}
+.addBtn{
+    color: #167c16;
+    background-color: #fff;
+    border: gray;
+    padding: 5px;
+    box-shadow: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 17px;
+    bottom: 20px;
+    width: 87px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 16px;
+    border: grey;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    font-family: sans-serif;
 }

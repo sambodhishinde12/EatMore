@@ -27,5 +27,21 @@ const RestroCard =({resData})=>{
        </div>
     )
  }
+//Higher order component
 
+export const deal = (RestroCard)=>{
+   return({resData})=>{
+      const dealInfo = resData?.info?.aggregatedDiscountInfoV3;
+      if(dealInfo){
+            return(
+               <div className={styles.deal}>
+                  <h3>{dealInfo.header} {dealInfo.subHeader}</h3>
+                  <RestroCard resData={resData}/>
+               </div>
+            )
+      }
+   return <RestroCard resData={resData} />;
+
+   }
+}
  export default RestroCard;
