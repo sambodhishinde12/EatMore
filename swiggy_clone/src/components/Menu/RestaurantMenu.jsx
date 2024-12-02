@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
 
 const {resId} = useParams();
 const menu = useRestautantMenu(resId);
-
+const [showMenu,setShowMenu] = useState(null)
 
 if(menu === null) return <Shimmer/>
 
@@ -20,7 +20,6 @@ const {itemCards,title} = menu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.ca
 const categories = menu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
     (res)=>res.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" 
     || res.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"); 
-
 
     return(
         <div className={styles.position}>
@@ -55,13 +54,19 @@ const categories = menu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.fi
             </div>
                
             <div className={styles.menuContainer}>
-            {categories.map((category)=><RestaurantItems key={category?.card?.info?.id} data={category?.card?.card}/>)}
+            {categories.map((category,index)=><RestaurantItems 
+            key={category?.card?.info?.id || index} 
+            data={category?.card?.card}
+            showMenu={index===showMenu}
+            setShowMenu={()=>setShowMenu(index === showMenu ? null : index)}
+            />)}
             
             </div>
-        </div>
-       
+        </div>       
         
     )
+   
+    
 }
 
 export default RestaurantMenu;

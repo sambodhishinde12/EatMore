@@ -1,0 +1,391 @@
+/* Drawer container styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 95%;
+    width: 500px;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transform: translateX(100%) !important; /* Hidden off-screen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Visible drawer styles */
+.drawerOpen {
+    transform: translateX(0) !important; /* Fully visible on-screen */
+}
+
+/* Close button styling */
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Header styling */
+.header {
+    border-bottom: 1px solid goldenrod;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+}
+
+/* Cart list container with scroll */
+.cartListContainer {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+/* Cart list styles */
+.cartList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cart item styling */
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    height: 70px;
+}
+
+/* .cartItem:hover {
+    transform: translateY(-2px);
+} */
+
+.cartItem h3 {
+    color: #333;
+    margin: 0;
+    font-size: 18px;
+    overflow: hidden;
+    width: 185px;
+}
+
+.cartItem p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.menuImage {
+    height: 90px;
+    width: 90px;
+    border-radius: 8px;
+}
+
+.quantity {
+    gap: 15px;
+    border: 2px solid gray;
+    padding: 2px;
+}
+
+.incdecBtn {
+    color: green;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+}
+.incdecBtn:hover{
+    transform: translateY(-2px);
+    color: darkgreen;
+    background-color: #f9f9f9;
+}
+/* Empty message styling */
+.emptyMessage {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    top: 60px;
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top:1px solid goldenrod;
+}
+
+.footerBtn {
+    width: 190px;
+    border: none;
+    padding: 12px;
+    background: rgb(228, 86, 34);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.footerBtn:hover {
+    transform: scale(1.1);
+}
+.cartDetails{
+    display:flex;
+    top: 75px;
+    position: relative;
+    gap: 200px;
+    padding: 10px;
+    align-items: center;
+}
+
+.userInfo{
+    width: 700px;
+    height: 600px;
+    border:none;
+    background-color: #fff;
+    position: relative;
+    left: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.bill{
+    width: 450px;
+    height: 600px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+body{
+    background-color: #f9f9f9;
+}
+.Billheader{
+    border-bottom: 2px solid #e45622;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 25px;
+    display: flex;
+    position: relative;
+    top: 8px;
+    font-weight: 700;
+}
+.billBody{
+    padding: 5px;
+}
+
+.details{
+    padding: 10px;
+}
+.row1{
+  padding: 15px;
+    gap: 100px;
+    display: flex;
+}
+.submitbtn{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+   
+}
+.error{
+    color: rgb(155, 4, 4);
+    font-size: small;
+    font-weight: 500;
+}
+.summaryBlock {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd; /* Soft gray for separation */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Reduced width to leave space for the edit button */
+    padding-top: 15px;
+  }
+  
+  .summaryAddress {
+    padding: 20px;
+   
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .address, .landmark, .cityPincode, .mobile {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .edit {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    top: 80px;
+    padding-right: 30px;
+    position: relative;
+    margin-left: -10px; /* Adjust the icon's position slightly */
+    transition: transform 0.3s ease;
+  }
+  
+  .edit:hover {
+    transform: scale(1.2); /* Slightly increases size on hover for better interaction feedback */
+  }
+  
+  .paymentMethods {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+    border-radius: 10px;
+  }
+  
+  .paymentHeader {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .gateways {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+  
+  .paymentOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .payment:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  input[type="radio"] {
+    display: none; /* Hides radio buttons */
+  }
+  
+  input[type="radio"]:checked + img {
+    border: 2px solid #e45622; /* Border on selected image for feedback */
+  }
+  
+  .cartPage{
+    display: flex;
+    position: relative;
+    top: 90px;
+    gap: 200px;
+  }
+  .cartSummary {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .billHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .cartItemsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
+  }
+  
+  .cartItem2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+  
+  .itemName {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .itemQuantity,
+  .itemPrice {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .couponSection {
+    margin: 16px 0;
+    text-align: center;
+  }
+  
+  .couponButton {
+    background-color: #f4f4f4;
+    border: 1px solid #d0d0d0;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .couponButton:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .calculationBill {
+    margin: 16px 0;
+    font-size: 0.9rem;
+  }
+  
+  .billRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+  
+  .totalPriceSection {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: right;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+  }
+  
+  .totalPriceRow {
+    display: flex;
+    justify-content: space-between;
+  }
+  

@@ -37,6 +37,10 @@
     display: flex;
     list-style-type: none;
     align-items: center;
+    font-weight: 800;
+}
+.navItems > ul > li  :hover{
+    color: orangered;
 }
 
 .navItems > ul > li{
@@ -57,3 +61,54 @@ a{
     color: black;
     
 }
+/* Base drawer styles - initially off-screen */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transform: translateX(100%); /* Hide drawer by shifting it off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+    z-index: 1000;
+}
+
+/* Show the drawer by resetting transform */
+.drawerOpen {
+    transform: translateX(0); /* Bring the drawer into view */
+}
+/* Dark, semi-transparent overlay for focus effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for desired effect */
+    z-index: 999; /* Below the drawer but above other content */
+    backdrop-filter: blur(4px); /* Optional: add blur effect */
+}
+.cartLength{
+    background-color:#49b049;
+    padding: 2px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 3px solid #49b049;
+    border-radius: 10px;
+    width: 12px;
+    justify-content: center;
+    height: 12px;
+    align-items: center;
+    display: flex;
+    position: relative;
+    bottom: 6px;
+    right: 5px;
+}
+.cartSec{
+    display: flex;
+}
+

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header/Header"; 
 import Body from "./components/Body/Body";
@@ -8,13 +8,28 @@ import Support from "./components/Support";
 import ErrorModel from "./components/ErrorModel";
 import Cart from "./components/CartDetails/Cart";
 import RestaurantMenu from "./components/Menu/RestaurantMenu";
+import {Provider} from "react-redux"
+import store from "./utils/store";
+import UserContext from "./utils/userContext";
 
 const AppLayout = () => {
+  const [userInfo, setUserInfo] = useState();
+
+ useEffect(()=>{
+  const data = {
+    name: "Sambodhi"
+  };
+  setUserInfo(data.name);
+ },[])
   return (
+    <Provider store={store}>
+      <UserContext.Provider value={{loggedInUser:userInfo}}>
     <div className="app">
       <Header />
       <Outlet/>
     </div>
+    </UserContext.Provider>
+    </Provider>
   );
 };
 

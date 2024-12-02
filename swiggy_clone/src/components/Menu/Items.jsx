@@ -1,9 +1,12 @@
+import { useDispatch } from "react-redux";
 import { MENU_IMG } from "../../utils/constants";
 import styles from "./RestaurantMenu.module.css";
+import { addItem } from "../../utils/cartSlice";
 
 const Items = ({ data }) => {
-  const handleAddItem = ()=>{
-    console.log("Clicked")
+  const dispatch = useDispatch();
+  const handleAddItem = (item)=> {
+    dispatch(addItem(item))
   }
   return (
     <div>
@@ -42,7 +45,7 @@ const Items = ({ data }) => {
                             className={styles.menuImage}
                           />
                         )}
-                        <button className={styles.addBtn} onClick={handleAddItem}>ADD +</button>
+                        <button className={styles.addBtn} onClick={()=>handleAddItem(item)}>ADD +</button>
                       </div>
                     </div>
                   </li>
@@ -82,7 +85,7 @@ const Items = ({ data }) => {
                         />
                       )}
                        
-                       <button className={styles.addBtn} onClick={handleAddItem}>ADD +</button>
+                       <button className={styles.addBtn} onClick={()=>handleAddItem(item)}>ADD +</button>
                     </div>
                   </div>
                 </li>

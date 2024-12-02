@@ -1,19 +1,15 @@
 import styles from "./RestaurantMenu.module.css";
 import downArrow from "../../utils/images/down-arrow.png";
 import Items from "./Items";
-import { useState } from "react";
 
-const RestaurantItems = ({ data }) => {
+const RestaurantItems = ({ data,showMenu,setShowMenu }) => {
   const itemCount = data?.itemCards?.length || data?.categories?.reduce((count, category) => count + category.itemCards?.length, 0);
-  const [showMenu,setShowMenu] = useState(false);
-  const handleClick = () =>{
-    setShowMenu(!showMenu)
-  }
+ 
   
   return (
     <div>
       <div className={styles.titleContainer}>
-        <div className={styles.positionMenu}  onClick={handleClick}>
+        <div className={styles.positionMenu}  onClick={setShowMenu}>
           <span>
             {data?.title} ({itemCount})
           </span>
