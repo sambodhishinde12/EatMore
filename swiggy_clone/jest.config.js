@@ -197,6 +197,8 @@ const config = {
 
 module.exports = {
   moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/src/components/__mocks__/filemock.js',
+
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },
   testEnvironment: 'jsdom',

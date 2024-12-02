@@ -1,0 +1,69 @@
+{
+    "info": {
+        "id": "608346",
+        "name": "McDonald's",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/18/a36397bb-80ad-4a9e-abf3-1e659ab8ea9c_608346.jpg",
+        "locality": "Lohagaon",
+        "areaName": "Aero-Mall",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+            "Burgers",
+            "Beverages",
+            "Cafe",
+            "Desserts"
+        ],
+        "avgRating": 4.5,
+        "parentId": "630",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "5.8K+",
+        "sla": {
+            "deliveryTime": 31,
+            "lastMileTravel": 5.6,
+            "serviceability": "SERVICEABLE",
+            "slaString": "30-35 mins",
+            "lastMileTravelString": "5.6 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-12-03 02:45:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "ITEMS",
+            "subHeader": "AT ₹99"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-7ef9e89a-bb6f-4806-ae20-690c84c8acd6"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/pune/mcdonalds-lohagaon-aero-mall-rest608346",
+        "type": "WEBLINK"
+    }
+}
