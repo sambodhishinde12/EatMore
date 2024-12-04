@@ -35,19 +35,20 @@ const Body = () => {
         <div className="search">
           <input
             type="text"
+            data-testid="searchItem"
             placeholder="Search..."
             className={styles.search}
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
         </div>
-        <div className="filter">
+        <div className="filter" data-testid="filter">
           <button className={styles.filterbtn} onClick={filterTopRatedRestaurants}>
             Top Rated
           </button>
         </div>
       </div>
-      {filteredRestaurants.length === 0 ? (
+      {filteredRestaurants?.length === 0 ? (
         searchText !== "" ? ( // If there are no matches and searchText is not empty
           <p>No matches found.</p>
         ) : (
@@ -55,7 +56,7 @@ const Body = () => {
         )
       ) : (
         <div className={styles.cardcontainer}>
-          {filteredRestaurants.map((res) => (
+          {filteredRestaurants?.map((res) => (
             <Link key={res.info.id} to={"/restaurant/"+res.info.id}>
               
               <RestaurantDeal  resData={res} /></Link>

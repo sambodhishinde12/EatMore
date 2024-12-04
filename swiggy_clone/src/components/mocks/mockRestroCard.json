@@ -1,31 +1,28 @@
 {
     "info": {
-        "id": "608346",
-        "name": "McDonald's",
-        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/18/a36397bb-80ad-4a9e-abf3-1e659ab8ea9c_608346.jpg",
-        "locality": "Lohagaon",
-        "areaName": "Aero-Mall",
-        "costForTwo": "₹400 for two",
+        "id": "364761",
+        "name": "Pizza Hut",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/a5b447b2-5a93-411e-b61c-36478584ebe0_364761.jpg",
+        "locality": "Dhanori",
+        "areaName": "Lohegaon",
+        "costForTwo": "₹350 for two",
         "cuisines": [
-            "Burgers",
-            "Beverages",
-            "Cafe",
-            "Desserts"
+            "Pizzas"
         ],
-        "avgRating": 4.5,
-        "parentId": "630",
-        "avgRatingString": "4.5",
-        "totalRatingsString": "5.8K+",
+        "avgRating": 4,
+        "parentId": "721",
+        "avgRatingString": "4.0",
+        "totalRatingsString": "3.1K+",
         "sla": {
-            "deliveryTime": 31,
-            "lastMileTravel": 5.6,
+            "deliveryTime": 32,
+            "lastMileTravel": 3.9,
             "serviceability": "SERVICEABLE",
             "slaString": "30-35 mins",
-            "lastMileTravelString": "5.6 km",
+            "lastMileTravelString": "3.9 km",
             "iconType": "ICON_TYPE_EMPTY"
         },
         "availability": {
-            "nextCloseTime": "2024-12-03 02:45:00",
+            "nextCloseTime": "2024-12-04 23:00:00",
             "opened": true
         },
         "badges": {},
@@ -39,8 +36,8 @@
             }
         },
         "aggregatedDiscountInfoV3": {
-            "header": "ITEMS",
-            "subHeader": "AT ₹99"
+            "header": "50% OFF",
+            "subHeader": "UPTO ₹100"
         },
         "differentiatedUi": {
             "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
@@ -54,16 +51,19 @@
         "restaurantOfferPresentationInfo": {},
         "externalRatings": {
             "aggregatedRating": {
-                "rating": "--"
-            }
+                "rating": "4.4",
+                "ratingCount": "1.8K+"
+            },
+            "source": "GOOGLE",
+            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
     },
     "analytics": {
-        "context": "seo-data-7ef9e89a-bb6f-4806-ae20-690c84c8acd6"
+        "context": "seo-data-4b2d69a7-4029-43aa-938b-07e46642bfe9"
     },
     "cta": {
-        "link": "https://www.swiggy.com/city/pune/mcdonalds-lohagaon-aero-mall-rest608346",
+        "link": "https://www.swiggy.com/city/pune/pizza-hut-dhanori-lohegaon-rest364761",
         "type": "WEBLINK"
     }
 }

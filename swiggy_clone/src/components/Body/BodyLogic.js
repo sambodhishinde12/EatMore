@@ -25,7 +25,7 @@ const BodyLogic = () => {
     if (searchText === "") {
       setFilteredRestaurants(listOfRestaurants);
     } else {
-      const filteredList = listOfRestaurants.filter((res) =>
+      const filteredList = listOfRestaurants?.filter((res) =>
         res.info.name.toLowerCase().includes(searchText.toLowerCase())
       );
       setFilteredRestaurants(filteredList);

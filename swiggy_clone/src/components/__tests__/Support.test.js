@@ -33,7 +33,6 @@ describe("All test cases of Supprt Page",()=>{
         //quering
         const inputBoxes = screen.getAllByRole("textbox");
         // expect(inputBoxes).toBeInTheDocument();
-        console.log(inputBoxes.length);
         expect(inputBoxes.length).toBe(3);
     })
 })

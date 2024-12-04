@@ -2,6 +2,7 @@ import { CDN_URL } from "../../utils/constants";
 import styles from "./RestroCard.module.css"
 import rating from "../../utils/images/rating.png"
 const RestroCard =({resData})=>{    
+   
     const {
        name,
        cuisines,
@@ -9,7 +10,7 @@ const RestroCard =({resData})=>{
       
     }=resData?.info;
     return(
-       <div className={styles.card}>
+       <div className={styles.card} >
          <div>
           <img className={styles.reslogo} alt="ResLogo" src={CDN_URL+resData.info.cloudinaryImageId}></img>
           </div>
@@ -34,7 +35,7 @@ export const deal = (RestroCard)=>{
       const dealInfo = resData?.info?.aggregatedDiscountInfoV3;
       if(dealInfo){
             return(
-               <div className={styles.deal}>
+               <div className={styles.deal} data-testid="resCard">
                   <h3>{dealInfo.header} {dealInfo.subHeader}</h3>
                   <RestroCard resData={resData}/>
                </div>

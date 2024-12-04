@@ -5,6 +5,6 @@ import "@testing-library/jest-dom"
 
 test("Should load Restaurant cards with prop data",()=>{
     render(<RestroCard resData={MOCK_DATA}/>)
-    const resName = screen.getByText("McDonald's");
+    const resName = screen.getByText("Pizza Hut");
     expect(resName).toBeInTheDocument()
 })
